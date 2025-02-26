@@ -15,6 +15,7 @@ return [
     'page_restore'                => 'atjaunoja lapu',
     'page_restore_notification'   => 'Lapa veiksmīgi atjaunota',
     'page_move'                   => 'pārvietoja lapu',
+    'page_move_notification'      => 'Lapa veiksmīgi pārvietota',
 
     // Chapters
     'chapter_create'              => 'izveidoja nodaļu',
@@ -24,12 +25,13 @@ return [
     'chapter_delete'              => 'izdzēsa nodaļu',
     'chapter_delete_notification' => 'Nodaļa veiksmīgi dzēsta',
     'chapter_move'                => 'pārvietoja nodaļu',
+    'chapter_move_notification' => 'Nodaļa veiksmīgi pārvietota',
 
     // Books
     'book_create'                 => 'izveidoja grāmatu',
     'book_create_notification'    => 'Grāmata veiksmīgi izveidota',
-    'book_create_from_chapter'              => 'converted chapter to book',
-    'book_create_from_chapter_notification' => 'Chapter successfully converted to a book',
+    'book_create_from_chapter'              => 'pārveidojā nodaļu par grāmatu',
+    'book_create_from_chapter_notification' => 'Nodaļa veiksmīgi pārveidota par grāmatu',
     'book_update'                 => 'atjaunoja grāmatu',
     'book_update_notification'    => 'Grāmata veiksmīgi atjaunināta',
     'book_delete'                 => 'izdzēsa grāmatu',
@@ -38,22 +40,41 @@ return [
     'book_sort_notification'      => 'Grāmata veiksmīgi pārkārtota',
 
     // Bookshelves
-    'bookshelf_create'            => 'created shelf',
-    'bookshelf_create_notification'    => 'Shelf successfully created',
-    'bookshelf_create_from_book'    => 'converted book to shelf',
-    'bookshelf_create_from_book_notification'    => 'Book successfully converted to a shelf',
-    'bookshelf_update'                 => 'updated shelf',
-    'bookshelf_update_notification'    => 'Shelf successfully updated',
-    'bookshelf_delete'                 => 'deleted shelf',
-    'bookshelf_delete_notification'    => 'Shelf successfully deleted',
+    'bookshelf_create'            => 'izveidoja plauktu',
+    'bookshelf_create_notification'    => 'Plaukts veiksmīgi izveidots',
+    'bookshelf_create_from_book'    => 'pārveidoja grāmatu par plauktu',
+    'bookshelf_create_from_book_notification'    => 'Grāmata veiksmīgi pārveidota par plauktu',
+    'bookshelf_update'                 => 'atjaunoja plauktu',
+    'bookshelf_update_notification'    => 'Plaukts veiksmīgi atjaunināts',
+    'bookshelf_delete'                 => 'izdzēsa plauktu',
+    'bookshelf_delete_notification'    => 'Plaukts veiksmīgi dzēsts',
+
+    // Revisions
+    'revision_restore' => 'versija atjaunota',
+    'revision_delete' => 'versija dzēsta',
+    'revision_delete_notification' => 'Versija veiksmīgi dzēsta',
 
     // Favourites
     'favourite_add_notification' => '":name" ir pievienots jūsu favorītiem',
     'favourite_remove_notification' => '":name" ir izņemts no jūsu favorītiem',
 
-    // MFA
+    // Watching
+    'watch_update_level_notification' => 'Skatīšanas uzstādījumi veiksmīgi atjaunināti',
+
+    // Auth
+    'auth_login' => 'pieteicies',
+    'auth_register' => 'reģistrējies kā jauns lietotājs',
+    'auth_password_reset_request' => 'pieprasīja lietotāja paroles atiestatīšanu',
+    'auth_password_reset_update' => 'atiestatīja lietotāja paroli',
+    'mfa_setup_method' => 'uzstādīja MFA metodi',
     'mfa_setup_method_notification' => '2FA funkcija aktivizēta',
+    'mfa_remove_method' => 'noņēma MFA metodi',
     'mfa_remove_method_notification' => '2FA funkcija noņemta',
+
+    // Settings
+    'settings_update' => 'atjaunoja uzstādījumus',
+    'settings_update_notification' => 'Uzstādījums veiksmīgi atjaunināts',
+    'maintenance_action_run' => 'veica apkopes darbību',
 
     // Webhooks
     'webhook_create' => 'izveidoja webhook',
@@ -63,11 +84,57 @@ return [
     'webhook_delete' => 'izdzēsa webhook',
     'webhook_delete_notification' => 'Webhook veiksmīgi izdzēsts',
 
+    // Imports
+    'import_create' => 'created import',
+    'import_create_notification' => 'Import successfully uploaded',
+    'import_run' => 'updated import',
+    'import_run_notification' => 'Content successfully imported',
+    'import_delete' => 'deleted import',
+    'import_delete_notification' => 'Import successfully deleted',
+
     // Users
+    'user_create' => 'izveidoja lietotāju',
+    'user_create_notification' => 'Lietotājs veiksmīgi izveidots',
+    'user_update' => 'atjaunoja lietotāju',
     'user_update_notification' => 'Lietotājs veiksmīgi atjaunināts',
+    'user_delete' => 'dzēsa lietotāju',
     'user_delete_notification' => 'Lietotājs veiksmīgi dzēsts',
 
-    // Other
+    // API Tokens
+    'api_token_create' => 'izveidoja API žetonu',
+    'api_token_create_notification' => 'API žetons veiksmīgi izveidots',
+    'api_token_update' => 'atjaunoja API žetonu',
+    'api_token_update_notification' => 'API žetons veiksmīgi atjaunināts',
+    'api_token_delete' => 'izdzēsa API žetonu',
+    'api_token_delete_notification' => 'API žetons veiksmīgi dzēsts',
+
+    // Roles
+    'role_create' => 'izveidoja lomu',
+    'role_create_notification' => 'Loma veiksmīgi izveidota',
+    'role_update' => 'atjaunoja lomu',
+    'role_update_notification' => 'Loma veiksmīgi atjaunināta',
+    'role_delete' => 'dzēsa lomu',
+    'role_delete_notification' => 'Loma veiksmīgi dzēsta',
+
+    // Recycle Bin
+    'recycle_bin_empty' => 'iztukšoja atkritni',
+    'recycle_bin_restore' => 'atjaunoja no atkritnes',
+    'recycle_bin_destroy' => 'izdzēsa no atkritnes',
+
+    // Comments
     'commented_on'                => 'komentēts',
+    'comment_create'              => 'pievienoja komentāru',
+    'comment_update'              => 'atjaunoja komentārju',
+    'comment_delete'              => 'dzēsa komentāru',
+
+    // Sort Rules
+    'sort_rule_create' => 'created sort rule',
+    'sort_rule_create_notification' => 'Sort rule successfully created',
+    'sort_rule_update' => 'updated sort rule',
+    'sort_rule_update_notification' => 'Sort rule successfully updated',
+    'sort_rule_delete' => 'deleted sort rule',
+    'sort_rule_delete_notification' => 'Sort rule successfully deleted',
+
+    // Other
     'permissions_update'          => 'atjaunoja atļaujas',
 ];

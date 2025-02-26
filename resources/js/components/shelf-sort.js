@@ -1,29 +1,6 @@
-import Sortable from "sortablejs";
-import {Component} from "./component";
-
-/**
- * @type {Object<string, function(HTMLElement, HTMLElement, HTMLElement)>}
- */
-const itemActions = {
-    move_up(item, shelfBooksList, allBooksList) {
-        const list = item.parentNode;
-        const index = Array.from(list.children).indexOf(item);
-        const newIndex = Math.max(index - 1, 0);
-        list.insertBefore(item, list.children[newIndex] || null);
-    },
-    move_down(item, shelfBooksList, allBooksList) {
-        const list = item.parentNode;
-        const index = Array.from(list.children).indexOf(item);
-        const newIndex = Math.min(index + 2, list.children.length);
-        list.insertBefore(item, list.children[newIndex] || null);
-    },
-    remove(item, shelfBooksList, allBooksList) {
-        allBooksList.appendChild(item);
-    },
-    add(item, shelfBooksList, allBooksList) {
-        shelfBooksList.appendChild(item);
-    },
-};
+import Sortable from 'sortablejs';
+import {Component} from './component';
+import {buildListActions, sortActionClickListener} from '../services/dual-lists.ts';
 
 export class ShelfSort extends Component {
 
@@ -55,18 +32,15 @@ export class ShelfSort extends Component {
     }
 
     setupListeners() {
-        this.elem.addEventListener('click', event => {
-            const sortItemAction = event.target.closest('.scroll-box-item button[data-action]');
-            if (sortItemAction) {
-                this.sortItemActionClick(sortItemAction);
-            }
-        });
+        const listActions = buildListActions(this.allBookList, this.shelfBookList);
+        const sortActionListener = sortActionClickListener(listActions, this.onChange.bind(this));
+        this.elem.addEventListener('click', sortActionListener);
 
-        this.bookSearchInput.addEventListener('input', event => {
+        this.bookSearchInput.addEventListener('input', () => {
             this.filterBooksByName(this.bookSearchInput.value);
         });
 
-        this.sortButtonContainer.addEventListener('click' , event => {
+        this.sortButtonContainer.addEventListener('click', event => {
             const button = event.target.closest('button[data-sort]');
             if (button) {
                 this.sortShelfBooks(button.dataset.sort);
@@ -78,11 +52,10 @@ export class ShelfSort extends Component {
      * @param {String} filterVal
      */
     filterBooksByName(filterVal) {
-
         // Set height on first search, if not already set, to prevent the distraction
         // of the list height jumping around
         if (!this.allBookList.style.height) {
-            this.allBookList.style.height = this.allBookList.getBoundingClientRect().height + 'px';
+            this.allBookList.style.height = `${this.allBookList.getBoundingClientRect().height}px`;
         }
 
         const books = this.allBookList.children;
@@ -92,20 +65,6 @@ export class ShelfSort extends Component {
             const show = !filterVal || bookEl.textContent.toLowerCase().includes(lowerFilter);
             bookEl.style.display = show ? null : 'none';
         }
-    }
-
-    /**
-     * Called when a sort item action button is clicked.
-     * @param {HTMLElement} sortItemAction
-     */
-    sortItemActionClick(sortItemAction) {
-        const sortItem = sortItemAction.closest('.scroll-box-item');
-        const action = sortItemAction.dataset.action;
-
-        const actionFunction = itemActions[action];
-        actionFunction(sortItem, this.shelfBookList, this.allBookList);
-
-        this.onChange();
     }
 
     onChange() {
@@ -122,10 +81,10 @@ export class ShelfSort extends Component {
             const bProp = bookB.dataset[sortProperty].toLowerCase();
 
             if (reverse) {
-                return aProp < bProp ? (aProp === bProp ? 0 : 1) : -1;
+                return bProp.localeCompare(aProp);
             }
 
-            return aProp < bProp ? (aProp === bProp ? 0 : -1) : 1;
+            return aProp.localeCompare(bProp);
         });
 
         for (const book of books) {

@@ -32,7 +32,7 @@ return [
     'digits_between'       => ':attribute må være mellomg :min og :max tall.',
     'email'                => ':attribute må være en gyldig e-post.',
     'ends_with' => ':attribute må slutte med en av verdiene: :values',
-    'file'                 => 'The :attribute must be provided as a valid file.',
+    'file'                 => 'Attributtet :attribute må angis som en gyldig fil.',
     'filled'               => ':attribute feltet er påkrevd.',
     'gt'                   => [
         'numeric' => ':attribute må være større enn :value.',
@@ -104,6 +104,11 @@ return [
     'unique'               => ':attribute har allerede blitt tatt.',
     'url'                  => ':attribute format er ugyldig.',
     'uploaded'             => 'kunne ikke lastes opp, tjeneren støtter ikke filer av denne størrelsen.',
+
+    'zip_file' => 'Attributtet :attribute må henvises til en fil i ZIP.',
+    'zip_file_mime' => 'Attributtet :attribute må referere en fil av typen :validTypes, som ble funnet :foundType.',
+    'zip_model_expected' => 'Data objekt forventet, men ":type" funnet.',
+    'zip_unique' => 'Attributtet :attribute må være unikt for objekttypen i ZIP.',
 
     // Custom validation lines
     'custom' => [

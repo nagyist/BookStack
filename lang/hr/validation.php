@@ -15,7 +15,7 @@ return [
     'alpha_dash'           => ':attribute  može sadržavati samo slova, brojeve, crtice i donje crtice.',
     'alpha_num'            => ':attribute može sadržavati samo slova i brojeve.',
     'array'                => ':attribute mora biti niz.',
-    'backup_codes'         => 'The provided code is not valid or has already been used.',
+    'backup_codes'         => 'Navedeni kod nije valjan ili je već korišten.',
     'before'               => ':attribute mora biti prije :date.',
     'between'              => [
         'numeric' => ':attribute mora biti između :min i :max.',
@@ -32,7 +32,7 @@ return [
     'digits_between'       => ':attribute mora biti između :min i :max znamenki.',
     'email'                => ':attribute mora biti valjana email adresa.',
     'ends_with' => ':attribute mora završiti s :values',
-    'file'                 => 'The :attribute must be provided as a valid file.',
+    'file'                 => 'Polje :attribute mora biti priloženo kao valjana datoteka.',
     'filled'               => ':attribute polje je obavezno.',
     'gt'                   => [
         'numeric' => ':attribute mora biti veći od :value.',
@@ -100,10 +100,15 @@ return [
     ],
     'string'               => ':attribute mora biti niz.',
     'timezone'             => ':attribute mora biti valjan.',
-    'totp'                 => 'The provided code is not valid or has expired.',
+    'totp'                 => 'Navedeni kod nije valjan ili je istekao.',
     'unique'               => ':attribute se već koristi.',
     'url'                  => 'Format :attribute nije valjan.',
     'uploaded'             => 'Datoteka se ne može prenijeti. Server možda ne prihvaća datoteke te veličine.',
+
+    'zip_file' => 'The :attribute needs to reference a file within the ZIP.',
+    'zip_file_mime' => 'The :attribute needs to reference a file of type :validTypes, found :foundType.',
+    'zip_model_expected' => 'Data object expected but ":type" found.',
+    'zip_unique' => 'The :attribute must be unique for the object type within the ZIP.',
 
     // Custom validation lines
     'custom' => [

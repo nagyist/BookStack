@@ -10,6 +10,7 @@ return [
 
     // Auth
     'error_user_exists_different_creds' => 'See e-posti aadress on juba seotud teise kasutajaga.',
+    'auth_pre_register_theme_prevention' => 'Etteantud detailidega kasutajakontot ei saadud registreerida',
     'email_already_confirmed' => 'E-posti aadress on juba kinnitatud. Proovi sisse logida.',
     'email_confirmation_invalid' => 'Kinnituslink ei ole kehtiv või on seda juba kasutatud. Proovi uuesti registreeruda.',
     'email_confirmation_expired' => 'Kinnituslink on aegunud. Sulle saadeti aadressi kinnitamiseks uus e-kiri.',
@@ -19,12 +20,10 @@ return [
     'ldap_extension_not_installed' => 'PHP LDAP laiendus ei ole paigaldatud',
     'ldap_cannot_connect' => 'Ühendus LDAP serveriga ebaõnnestus',
     'saml_already_logged_in' => 'Juba sisse logitud',
-    'saml_user_not_registered' => 'Kasutaja :name ei ole registreeritud ning automaatne registreerimine on keelatud',
     'saml_no_email_address' => 'Selle kasutaja e-posti aadressi ei õnnestunud välisest autentimissüsteemist leida',
     'saml_invalid_response_id' => 'Välisest autentimissüsteemist tulnud päringut ei algatatud sellest rakendusest. Seda viga võib põhjustada pärast sisselogimist tagasi liikumine.',
     'saml_fail_authed' => 'Sisenemine :system kaudu ebaõnnestus, süsteem ei andnud volitust',
     'oidc_already_logged_in' => 'Juba sisse logitud',
-    'oidc_user_not_registered' => 'Kasutaja :name ei ole registreeritud ning automaatne registreerimine on keelatud',
     'oidc_no_email_address' => 'Selle kasutaja e-posti aadressi ei õnnestunud välisest autentimissüsteemist leida',
     'oidc_fail_authed' => 'Sisenemine :system kaudu ebaõnnestus, süsteem ei andnud volitust',
     'social_no_action_defined' => 'Tegevus on defineerimata',
@@ -38,25 +37,32 @@ return [
     'social_driver_not_found' => 'Sotsiaalmeedia kontode draiverit ei leitud',
     'social_driver_not_configured' => 'Sinu :socialAccount konto seaded ei ole korrektsed.',
     'invite_token_expired' => 'Link on aegunud. Võid selle asemel proovida oma konto parooli lähtestada.',
+    'login_user_not_found' => 'Selle tegevuse jaoks ei leitud kasutajat.',
 
     // System
     'path_not_writable' => 'Faili asukohaga :filePath ei õnnestunud üles laadida. Veendu, et serveril on kirjutusõigused.',
     'cannot_get_image_from_url' => 'Ei suutnud laadida pilti aadressilt :url',
     'cannot_create_thumbs' => 'Server ei saa piltide eelvaateid tekitada. Veendu, et PHP GD laiendus on paigaldatud.',
     'server_upload_limit' => 'Server ei luba nii suurte failide üleslaadimist. Proovi väiksema failiga.',
+    'server_post_limit' => 'Server ei saa etteantud andmemahtu vastu võtta. Proovi uuesti väiksema failiga.',
     'uploaded'  => 'Server ei luba nii suurte failide üleslaadimist. Proovi väiksema failiga.',
-    'file_upload_timeout' => 'Faili üleslaadimine aegus.',
 
     // Drawing & Images
     'image_upload_error' => 'Pildi üleslaadimisel tekkis viga',
     'image_upload_type_error' => 'Pildifaili tüüp ei ole korrektne',
+    'image_upload_replace_type' => 'Pildifaili asendused peavad olema sama tüüpi',
+    'image_upload_memory_limit' => 'Pildi üleslaadimine ja/või eelvaadete tekitamine ebaõnnestus süsteemsete ressursipiirangute tõttu.',
+    'image_thumbnail_memory_limit' => 'Pildi eelvaadete tekitamine ebaõnnestus süsteemsete ressursipiirangute tõttu.',
+    'image_gallery_thumbnail_memory_limit' => 'Galerii eelvaadete tekitamine ebaõnnestus süsteemsete ressursipiirangute tõttu.',
     'drawing_data_not_found' => 'Joonise andmeid ei õnnestunud laadida. Joonist ei pruugi enam eksisteerida, või sul puuduvad õigused selle vaatamiseks.',
 
     // Attachments
     'attachment_not_found' => 'Manust ei leitud',
+    'attachment_upload_error' => 'Manuse faili üleslaadimisel tekkis viga',
 
     // Pages
     'page_draft_autosave_fail' => 'Mustandi salvestamine ebaõnnestus. Kontrolli oma internetiühendust',
+    'page_draft_delete_fail' => 'Mustandi kustutamine ja lehe salvestatud seisu laadimine ebaõnnestus',
     'page_custom_home_deletion' => 'Ei saa kustutada lehte, mis on määratud avaleheks',
 
     // Entities
@@ -72,6 +78,7 @@ return [
     // Users
     'users_cannot_delete_only_admin' => 'Ainsat administraatorit ei saa kustutada',
     'users_cannot_delete_guest' => 'Külaliskasutajat ei saa kustutada',
+    'users_could_not_send_invite' => 'Kasutajat ei saadud luua, kuna kutse e-kirja saatmine ebaõnnestus',
 
     // Roles
     'role_cannot_be_edited' => 'Seda rolli ei saa muuta',
@@ -98,6 +105,18 @@ return [
     'app_down' => ':appName on hetkel maas',
     'back_soon' => 'See on varsti tagasi.',
 
+    // Import
+    'import_zip_cant_read' => 'ZIP-faili lugemine ebaõnnestus.',
+    'import_zip_cant_decode_data' => 'ZIP-failist ei leitud data.json sisu.',
+    'import_zip_no_data' => 'ZIP-failist ei leitud raamatute, peatükkide või lehtede sisu.',
+    'import_validation_failed' => 'Imporditud ZIP-faili valideerimine ebaõnnestus vigadega:',
+    'import_zip_failed_notification' => 'ZIP-faili importimine ebaõnnestus.',
+    'import_perms_books' => 'Sul puuduvad õigused raamatute lisamiseks.',
+    'import_perms_chapters' => 'Sul puuduvad õigused peatükkide lisamiseks.',
+    'import_perms_pages' => 'Sul puuduvad õigused lehtede lisamiseks.',
+    'import_perms_images' => 'Sul puuduvad õigused piltide lisamiseks.',
+    'import_perms_attachments' => 'Sul puuduvad õigused manuste lisamiseks.',
+
     // API errors
     'api_no_authorization_found' => 'Päringust ei leitud volitustunnust',
     'api_bad_authorization_format' => 'Päringust leiti volitustunnus, aga see ei olnud korrektses formaadis',
@@ -109,4 +128,6 @@ return [
     // Settings & Maintenance
     'maintenance_test_email_failure' => 'Test e-kirja saatmisel tekkis viga:',
 
+    // HTTP errors
+    'http_ssr_url_no_match' => 'URL ei klapi ühegi lubatud SSR hostiga',
 ];

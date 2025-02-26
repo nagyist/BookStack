@@ -6,6 +6,7 @@ return [
 
     // Buttons
     'cancel' => 'Avbryt',
+    'close' => 'Lukk',
     'confirm' => 'Bekreft',
     'back' => 'Tilbake',
     'save' => 'Lagre',
@@ -19,17 +20,17 @@ return [
     'description' => 'Beskrivelse',
     'role' => 'Rolle',
     'cover_image' => 'Forside',
-    'cover_image_description' => 'Bildet bør være ca. 440x250px.',
+    'cover_image_description' => 'Dette bildet bør være omtrent 440x250px selv om det vil bli fleksibelt skalert og beskjært slik at brukergrensesnittet passer til forskjellige scenarier ved behov. Dette betyr at de faktiske dimensjonene for visning varierer.',
 
     // Actions
     'actions' => 'Handlinger',
     'view' => 'Vis',
     'view_all' => 'Vis alle',
-    'new' => 'New',
+    'new' => 'Ny',
     'create' => 'Opprett',
     'update' => 'Oppdater',
     'edit' => 'Rediger',
-    'sort' => 'Sorter',
+    'sort' => 'Sortér',
     'move' => 'Flytt',
     'copy' => 'Kopier',
     'reply' => 'Svar',
@@ -41,15 +42,17 @@ return [
     'remove' => 'Fjern',
     'add' => 'Legg til',
     'configure' => 'Konfigurer',
+    'manage' => 'Administrer',
     'fullscreen' => 'Fullskjerm',
-    'favourite' => 'Favorisér',
-    'unfavourite' => 'Avfavorisér',
+    'favourite' => 'Favoriser',
+    'unfavourite' => 'Avfavoriser',
     'next' => 'Neste',
     'previous' => 'Forrige',
-    'filter_active' => 'Active Filter:',
-    'filter_clear' => 'Clear Filter',
-    'download' => 'Download',
-    'open_in_tab' => 'Open in Tab',
+    'filter_active' => 'Aktivt filter:',
+    'filter_clear' => 'Tøm filter',
+    'download' => 'Last ned',
+    'open_in_tab' => 'Åpne i fane',
+    'open' => 'Åpne',
 
     // Sort Options
     'sort_options' => 'Sorteringsalternativer',
@@ -75,20 +78,20 @@ return [
     'default' => 'Standard',
     'breadcrumb' => 'Brødsmuler',
     'status' => 'Status',
-    'status_active' => 'Active',
-    'status_inactive' => 'Inactive',
-    'never' => 'Never',
-    'none' => 'None',
+    'status_active' => 'Aktiv',
+    'status_inactive' => 'Inaktiv',
+    'never' => 'Aldri',
+    'none' => 'Ingen',
 
     // Header
-    'homepage' => 'Homepage',
+    'homepage' => 'Hjemmeside',
     'header_menu_expand' => 'Utvid toppmeny',
     'profile_menu' => 'Profilmeny',
     'view_profile' => 'Vis profil',
     'edit_profile' => 'Endre Profile',
     'dark_mode' => 'Kveldsmodus',
     'light_mode' => 'Dagmodus',
-    'global_search' => 'Global Search',
+    'global_search' => 'Globalt søk',
 
     // Layout tabs
     'tab_info' => 'Informasjon',
@@ -104,4 +107,7 @@ return [
     // Not directly used but available for convenience to users.
     'privacy_policy' => 'Personvernregler',
     'terms_of_service' => 'Bruksvilkår',
+
+    // OpenSearch
+    'opensearch_description' => 'Søk :appName',
 ];

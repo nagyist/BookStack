@@ -6,6 +6,7 @@ return [
 
     // Buttons
     'cancel' => 'Zrušiť',
+    'close' => 'Close',
     'confirm' => 'Potvrdiť',
     'back' => 'Späť',
     'save' => 'Uložiť',
@@ -19,13 +20,13 @@ return [
     'description' => 'Popis',
     'role' => 'Rola',
     'cover_image' => 'Obal knihy',
-    'cover_image_description' => 'Tento obrázok by mal byť približne 300 x 170 pixelov.',
+    'cover_image_description' => 'This image should be approximately 440x250px although it will be flexibly scaled & cropped to fit the user interface in different scenarios as required, so actual dimensions for display will differ.',
 
     // Actions
     'actions' => 'Akcie',
     'view' => 'Zobraziť',
     'view_all' => 'Zobraziť všetko',
-    'new' => 'New',
+    'new' => 'Nový',
     'create' => 'Vytvoriť',
     'update' => 'Aktualizovať',
     'edit' => 'Editovať',
@@ -41,6 +42,7 @@ return [
     'remove' => 'Odstrániť',
     'add' => 'Pridať',
     'configure' => 'Konfigurácia',
+    'manage' => 'Manage',
     'fullscreen' => 'Celá obrazovka',
     'favourite' => 'Pridať do obľúbených',
     'unfavourite' => 'Odstrániť z obľúbených',
@@ -48,8 +50,9 @@ return [
     'previous' => 'Späť',
     'filter_active' => 'Aktívny filter:',
     'filter_clear' => 'Bez filtrovania',
-    'download' => 'Download',
-    'open_in_tab' => 'Open in Tab',
+    'download' => 'Stiahnuť',
+    'open_in_tab' => 'Otvoriť na novej karte',
+    'open' => 'Open',
 
     // Sort Options
     'sort_options' => 'Možnosti triedenia',
@@ -74,21 +77,21 @@ return [
     'list_view' => 'Zobraziť ako zoznam',
     'default' => 'Predvolené',
     'breadcrumb' => 'Breadcrumb',
-    'status' => 'Status',
-    'status_active' => 'Active',
-    'status_inactive' => 'Inactive',
-    'never' => 'Never',
-    'none' => 'None',
+    'status' => 'Stav',
+    'status_active' => 'Aktívny',
+    'status_inactive' => 'Neaktívny',
+    'never' => 'Nikdy',
+    'none' => 'Žiadne',
 
     // Header
-    'homepage' => 'Homepage',
+    'homepage' => 'Domovská stránka',
     'header_menu_expand' => 'Rozbaliť menu v záhlaví',
     'profile_menu' => 'Menu profilu',
     'view_profile' => 'Zobraziť profil',
     'edit_profile' => 'Upraviť profil',
     'dark_mode' => 'Tmavý režim',
     'light_mode' => 'Svetlý režim',
-    'global_search' => 'Global Search',
+    'global_search' => 'Globálne vyhľadávanie',
 
     // Layout tabs
     'tab_info' => 'Informácie',
@@ -104,4 +107,7 @@ return [
     // Not directly used but available for convenience to users.
     'privacy_policy' => 'Zásady ochrany osobných údajov',
     'terms_of_service' => 'Podmienky používania',
+
+    // OpenSearch
+    'opensearch_description' => 'Search :appName',
 ];

@@ -6,6 +6,7 @@ return [
 
     // Buttons
     'cancel' => 'Atcelt',
+    'close' => 'Aizvērt',
     'confirm' => 'Apstiprināt',
     'back' => 'Atpakaļ',
     'save' => 'Saglabāt',
@@ -19,13 +20,13 @@ return [
     'description' => 'Apraksts',
     'role' => 'Loma',
     'cover_image' => 'Vāka attēls',
-    'cover_image_description' => 'Šim attēlam būtu jābūt aptuveni 440x250px.',
+    'cover_image_description' => 'Šim attēlam jābūt apmēram 440x250px izmērā, taču tas tiks pielāgots lietotāja saskarnei dažādos scenārijos pēc nepieciešamības, un attēla izmēri tad var atšķirties.',
 
     // Actions
     'actions' => 'Darbības',
     'view' => 'Skatīt',
     'view_all' => 'Skatīt visus',
-    'new' => 'New',
+    'new' => 'Jauns',
     'create' => 'Izveidot',
     'update' => 'Atjaunināt',
     'edit' => 'Rediģēt',
@@ -41,6 +42,7 @@ return [
     'remove' => 'Noņemt',
     'add' => 'Pievienot',
     'configure' => 'Mainīt konfigurāciju',
+    'manage' => 'Pārvaldīt',
     'fullscreen' => 'Pilnekrāns',
     'favourite' => 'Pievienot favorītiem',
     'unfavourite' => 'Noņemt no favorītiem',
@@ -48,8 +50,9 @@ return [
     'previous' => 'Iepriekšējais',
     'filter_active' => 'Aktīvais filtrs:',
     'filter_clear' => 'Notīrīt filtru',
-    'download' => 'Download',
-    'open_in_tab' => 'Open in Tab',
+    'download' => 'Lejupielādēt',
+    'open_in_tab' => 'Atvērt cilnē',
+    'open' => 'Atvērt',
 
     // Sort Options
     'sort_options' => 'Kārtošanas Opcijas',
@@ -81,14 +84,14 @@ return [
     'none' => 'Neviens',
 
     // Header
-    'homepage' => 'Homepage',
+    'homepage' => 'Sākumlapa',
     'header_menu_expand' => 'Izvērst galvenes izvēlni',
     'profile_menu' => 'Profila izvēlne',
     'view_profile' => 'Apskatīt profilu',
     'edit_profile' => 'Rediģēt profilu',
     'dark_mode' => 'Tumšais režīms',
     'light_mode' => 'Gaišais režīms',
-    'global_search' => 'Global Search',
+    'global_search' => 'Vispārējā meklēšana',
 
     // Layout tabs
     'tab_info' => 'Informācija',
@@ -104,4 +107,7 @@ return [
     // Not directly used but available for convenience to users.
     'privacy_policy' => 'Privātuma politika',
     'terms_of_service' => 'Pakalpojuma noteikumi',
+
+    // OpenSearch
+    'opensearch_description' => 'Search :appName',
 ];

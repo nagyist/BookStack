@@ -14,7 +14,8 @@ return [
     'page_delete_notification'    => 'Η σελίδα διαγράφηκε επιτυχώς',
     'page_restore'                => 'αποκατεστημένη σελίδα',
     'page_restore_notification'   => 'Η σελίδα αποκαταστάθηκε με επιτυχία',
-    'page_move'                   => 'Η σελίδα μετακινήθηκε',
+    'page_move'                   => 'σελίδα που μετακινήθηκε',
+    'page_move_notification'      => 'Η σελίδα μετακινήθηκε με επιτυχία',
 
     // Chapters
     'chapter_create'              => 'δημιουργήθηκε κεφάλαιο',
@@ -24,6 +25,7 @@ return [
     'chapter_delete'              => 'διαγραμμένο κεφάλαιο',
     'chapter_delete_notification' => 'Το κεφάλαιο διαγράφηκε επιτυχώς',
     'chapter_move'                => 'το κεφάλαιο μετακινήθηκε',
+    'chapter_move_notification' => 'Το κεφάλαιο μετακινήθηκε με επιτυχία',
 
     // Books
     'book_create'                 => 'το βιβλίο δημιουργήθηκε',
@@ -47,13 +49,32 @@ return [
     'bookshelf_delete'                 => 'διαγραμμένο ράφι',
     'bookshelf_delete_notification'    => 'Το ράφι ενημερώθηκε επιτυχώς',
 
+    // Revisions
+    'revision_restore' => 'αποκατεστημένη αναθεώρηση',
+    'revision_delete' => 'διαγραμμένη αναθεώρηση',
+    'revision_delete_notification' => 'Η αναθεώρηση διαγράφηκε με επιτυχία',
+
     // Favourites
     'favourite_add_notification' => '":name" προστέθηκε στα αγαπημένα σας',
     'favourite_remove_notification' => '":name" προστέθηκε στα αγαπημένα σας',
 
-    // MFA
+    // Watching
+    'watch_update_level_notification' => 'Οι προτιμήσεις παρακολούθησης ενημερώθηκαν επιτυχώς',
+
+    // Auth
+    'auth_login' => 'συνδεδεμένος',
+    'auth_register' => 'εγγεγραμμένος ως νέος χρήστης',
+    'auth_password_reset_request' => 'ζητήθηκε επαναφορά κωδικού πρόσβασης χρήστη',
+    'auth_password_reset_update' => 'επαναφορά κωδικού πρόσβασης χρήστη',
+    'mfa_setup_method' => 'διαμορφωμένη μέθοδος MFA',
     'mfa_setup_method_notification' => 'Η μέθοδος πολλαπλών παραγόντων διαμορφώθηκε επιτυχώς',
+    'mfa_remove_method' => 'καταργήθηκε η μέθοδος MFA',
     'mfa_remove_method_notification' => 'Η μέθοδος πολλαπλών παραγόντων καταργήθηκε με επιτυχία',
+
+    // Settings
+    'settings_update' => 'ενημερωμένες ρυθμίσεις',
+    'settings_update_notification' => 'Οι ρυθμίσεις ενημερώθηκαν με επιτυχία',
+    'maintenance_action_run' => 'έτρεξε δράση συντήρησης',
 
     // Webhooks
     'webhook_create' => 'Το webhook δημιουργήθηκε',
@@ -63,11 +84,57 @@ return [
     'webhook_delete' => 'διαγραμμένο webhook',
     'webhook_delete_notification' => 'Το Webhook διαγράφηκε επιτυχώς',
 
+    // Imports
+    'import_create' => 'δημιουργημένη εισαγωγή',
+    'import_create_notification' => 'Το εισαγόμενο αρχείο μεταφορτώθηκε επιτυχώς',
+    'import_run' => 'ενημερωμένη εισαγωγή',
+    'import_run_notification' => 'Το περιεχόμενο εισήχθη επιτυχώς',
+    'import_delete' => 'διαγραμμένη εισαγωγή',
+    'import_delete_notification' => 'Η εισαγωγή διαγράφηκε επιτυχώς',
+
     // Users
+    'user_create' => 'δημιουργημένος χρήστης',
+    'user_create_notification' => 'Ο χρήστης δημιουργήθηκε με επιτυχία',
+    'user_update' => 'ενημερωμένος χρήστης',
     'user_update_notification' => 'Ο Χρήστης ενημερώθηκε με επιτυχία',
+    'user_delete' => 'διαγραμμένος χρήστης',
     'user_delete_notification' => 'Ο Χρήστης αφαιρέθηκε επιτυχώς',
 
-    // Other
+    // API Tokens
+    'api_token_create' => 'created API token',
+    'api_token_create_notification' => 'O κωδικός API δημιουργήθηκε με επιτυχία',
+    'api_token_update' => 'updated API token',
+    'api_token_update_notification' => 'κωδικός API ενημερώθηκε με επιτυχία',
+    'api_token_delete' => 'deleted API token',
+    'api_token_delete_notification' => 'Το διακριτικό API διαγράφηκε με επιτυχία',
+
+    // Roles
+    'role_create' => 'δημιουργημένος ρόλος',
+    'role_create_notification' => 'Ο Ρόλος δημιουργήθηκε με επιτυχία',
+    'role_update' => 'Ενημέρωση ρόλου',
+    'role_update_notification' => 'Ο Ρόλος ενημερώθηκε με επιτυχία',
+    'role_delete' => 'διαγραμμένος ρόλος',
+    'role_delete_notification' => 'Ο Ρόλος διαγράφηκε επιτυχώς',
+
+    // Recycle Bin
+    'recycle_bin_empty' => 'αδειασμένος κάδος ανακύκλωσης',
+    'recycle_bin_restore' => 'αποκαταστάθηκε από τον κάδο ανακύκλωσης',
+    'recycle_bin_destroy' => 'αφαιρέθηκε από τον κάδο ανακύκλωσης',
+
+    // Comments
     'commented_on'                => 'σχολίασε',
+    'comment_create'              => 'προστέθηκε σχόλιο',
+    'comment_update'              => 'ενημερώθηκε σχόλιο',
+    'comment_delete'              => 'διαγράφηκε σχόλιο',
+
+    // Sort Rules
+    'sort_rule_create' => 'created sort rule',
+    'sort_rule_create_notification' => 'Sort rule successfully created',
+    'sort_rule_update' => 'updated sort rule',
+    'sort_rule_update_notification' => 'Sort rule successfully updated',
+    'sort_rule_delete' => 'deleted sort rule',
+    'sort_rule_delete_notification' => 'Sort rule successfully deleted',
+
+    // Other
     'permissions_update'          => 'ενημερωμένα δικαιώματα',
 ];

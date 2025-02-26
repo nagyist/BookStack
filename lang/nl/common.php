@@ -6,6 +6,7 @@ return [
 
     // Buttons
     'cancel' => 'Annuleer',
+    'close' => 'Sluit',
     'confirm' => 'Bevestig',
     'back' => 'Terug',
     'save' => 'Opslaan',
@@ -19,7 +20,7 @@ return [
     'description' => 'Beschrijving',
     'role' => 'Rol',
     'cover_image' => 'Omslagfoto',
-    'cover_image_description' => 'Deze afbeelding moet ongeveer 440x250px zijn.',
+    'cover_image_description' => 'Deze afbeelding moet ongeveer 440x250 pixels zijn, hoewel deze flexibel zal worden geschaald en bijgesneden naargelang dit nodig is in de verschillende scenario\'s van de gebruikersinterface. De daadwerkelijk gebruikte afmetingen voor weergave zullen dan verschillen.',
 
     // Actions
     'actions' => 'Acties',
@@ -41,6 +42,7 @@ return [
     'remove' => 'Verwijder',
     'add' => 'Voeg toe',
     'configure' => 'Configureer',
+    'manage' => 'Beheer',
     'fullscreen' => 'Volledig scherm',
     'favourite' => 'Favoriet',
     'unfavourite' => 'Verwijderen als favoriet',
@@ -50,6 +52,7 @@ return [
     'filter_clear' => 'Wis Filter',
     'download' => 'Download',
     'open_in_tab' => 'Open als Tabblad',
+    'open' => 'Open',
 
     // Sort Options
     'sort_options' => 'Sorteeropties',
@@ -59,7 +62,7 @@ return [
     'sort_name' => 'Naam',
     'sort_default' => 'Standaard',
     'sort_created_at' => 'Aanmaakdatum',
-    'sort_updated_at' => 'Gewijzigd op',
+    'sort_updated_at' => 'Bijwerkdatum',
 
     // Misc
     'deleted_user' => 'Verwijderde gebruiker',
@@ -104,4 +107,7 @@ return [
     // Not directly used but available for convenience to users.
     'privacy_policy' => 'Privacybeleid',
     'terms_of_service' => 'Algemene voorwaarden',
+
+    // OpenSearch
+    'opensearch_description' => 'Zoek in :appName',
 ];

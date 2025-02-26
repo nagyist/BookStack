@@ -32,7 +32,7 @@ return [
     'digits_between'       => ':attribute musí mať medzi :min a :max číslicami.',
     'email'                => ':attribute musí byť platná emailová adresa.',
     'ends_with' => ':attribute musí končiť jednou z nasledujúcich hodnôt :values',
-    'file'                 => 'The :attribute must be provided as a valid file.',
+    'file'                 => ':attribute musí byť uvedený ako platný súbor.',
     'filled'               => 'Políčko :attribute je povinné.',
     'gt'                   => [
         'numeric' => 'Hodnota :attribute musí byť väčšia ako :value.',
@@ -104,6 +104,11 @@ return [
     'unique'               => ':attribute je už použité.',
     'url'                  => ':attribute formát je neplatný.',
     'uploaded'             => 'Súbor sa nepodarilo nahrať. Server nemusí akceptovať súbory tejto veľkosti.',
+
+    'zip_file' => 'The :attribute needs to reference a file within the ZIP.',
+    'zip_file_mime' => 'The :attribute needs to reference a file of type :validTypes, found :foundType.',
+    'zip_model_expected' => 'Data object expected but ":type" found.',
+    'zip_unique' => 'The :attribute must be unique for the object type within the ZIP.',
 
     // Custom validation lines
     'custom' => [
